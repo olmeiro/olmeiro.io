@@ -29,7 +29,7 @@ export const NavBar = () => {
   return (
     <>
       {/* navbar goes here */}
-      <nav className="bg-gray-100">
+      <nav className="bg-customwhite">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between ">
             <div className="flex space-x-4">

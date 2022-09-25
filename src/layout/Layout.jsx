@@ -5,7 +5,7 @@ import { NavBar } from './components/NavBar'
 
 export const Layout = ({ children }) => {
   return (
-    <div className='w-full min-h-screen dark:bg-black'>
+    <div className='w-full min-h-screen dark:bg-gleaming-fate'>
       <NavBar />
       <main>
         {children}
