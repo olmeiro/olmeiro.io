@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['ui-sans-serif', 'system-ui'],
+        serif: ['Merriweather', 'serif'],
+        mono: ['ui-monospace', 'SFMono-Regular'],
+        dmsans: ['DM Sans', 'sans-serif'],
+        advent: ['Advent Pro', 'sans-serif']
+      },
       backgroundImage: {
         'gleaming-fate': "url('../public/images/gleaming-fate.jpg')",
         'blurry-gradient': "url('../public/images/blurry-gradient.png')"
