@@ -1,9 +1,9 @@
-import { Link } from 'react-router-dom'
 import { FaTwitter, FaLinkedin, FaGithub } from 'react-icons/fa'
 
 export const Footer = () => {
   return (
-    <div className="fixed bottom-0 w-full flex flex-col p-2 md:flex-row justify-center items-center bg-slate-300">
+    // <div className="fixed bottom-0 w-full flex flex-col p-2 md:flex-row justify-center items-center bg-slate-300">
+    <div className="w-full flex flex-col justify-center items-center  p-2 md:flex-row   bg-slate-300">
       <div className='w-1/4 flex justify-center'>
         <p className=' font-advent font-semibold'>Porfolio</p>
       </div>

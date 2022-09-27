@@ -31,7 +31,7 @@ export const NavBar = () => {
       {/* navbar goes here */}
       <nav className="bg-customwhite">
         <div className="max-w-6xl mx-auto px-4">
-          <div className="flex justify-between ">
+          <div className="flex justify-between">
             <div className="flex space-x-4">
               {/* logo */}
               <div className="mr-4">
@@ -55,7 +55,7 @@ export const NavBar = () => {
                 Contact
                 </Link>
             </div>
-            <div className='bg-red-500 flex items-center'>
+            <div className='flex items-center'>
               <Dark />
             </div>
 
