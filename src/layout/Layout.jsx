@@ -7,7 +7,7 @@ export const Layout = ({ children }) => {
   return (
     <div className='w-full h-screen dark:bg-gleaming-fate'>
       <NavBar />
-      <main className='w-full min-h-screen dark:bg-gleaming-fate'>
+      <main className='container mx-auto p-4 min-h-screen dark:bg-gleaming-fate'>
         {children}
       </main>
       <Footer />
