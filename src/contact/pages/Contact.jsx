@@ -2,9 +2,12 @@ import { useRef } from 'react'
 import { MdOutlineMail } from 'react-icons/md'
 import { BsTelephoneOutbound } from 'react-icons/bs'
 import emailjs from '@emailjs/browser'
+import Swal from 'sweetalert2'
 
 import { Layout } from '../../layout/Layout'
 import { useForm } from '../hooks/useForm'
+
+import imageForm from '../assets/imgform.png'
 
 const initialStateForm = {
   name: '',
@@ -33,10 +36,20 @@ export const Contact = () => {
 
     emailjs.send(`${YOUR_SERVICE_ID}`, `${YOUR_TEMPLATE_ID}`, templateParams, `${YOUR_PUBLIC_KEY}`)
       .then((response) => {
-        console.log('SUCCESS!', response.status, response.text)
+        Swal.fire({
+          title: 'Excellent!',
+          text: 'I will be contacting you soon..',
+          imageUrl: `${imageForm}`,
+          imageWidth: 400,
+          imageHeight: 200,
+          imageAlt: 'image logo olme'
+        })
       }, (err) => {
         console.log('FAILED...', err)
+        Swal.fire('Try it again. Something was wrong!')
       })
+
+    e.target.reset()
   }
 
   return (
