@@ -6,8 +6,11 @@ import Swal from 'sweetalert2'
 
 import { Layout } from '../../layout/Layout'
 import { useForm } from '../hooks/useForm'
+import { getEnvVariables } from '../helpers'
 
 import imageForm from '../assets/imgform.png'
+
+const { VITE_PUBLIC_KEY, VITE_SERVICE_ID, VITE_TEMPLATE_ID } = getEnvVariables()
 
 const initialStateForm = {
   name: '',
@@ -21,10 +24,6 @@ export const Contact = () => {
   const { hadleInputChange, name, email, message, phone, reset } = useForm(initialStateForm)
 
   const handleSubmit = (e) => {
-    const YOUR_SERVICE_ID = 'service_qnne41v'
-    const YOUR_PUBLIC_KEY = 'tC-rHnFJEFsK2vhzK'
-    const YOUR_TEMPLATE_ID = 'contact_form'
-
     e.preventDefault()
 
     const templateParams = {
@@ -34,7 +33,7 @@ export const Contact = () => {
       phone
     }
 
-    emailjs.send(`${YOUR_SERVICE_ID}`, `${YOUR_TEMPLATE_ID}`, templateParams, `${YOUR_PUBLIC_KEY}`)
+    emailjs.send(`${VITE_SERVICE_ID}`, `${VITE_TEMPLATE_ID}`, templateParams, `${VITE_PUBLIC_KEY}`)
       .then((response) => {
         Swal.fire({
           title: 'Excellent!',
