@@ -30,7 +30,7 @@ export const NavBar = () => {
   return (
     <>
       {/* navbar goes here */}
-      <nav className="bg-customwhite">
+      <nav className="bg-customwhite dark:bg-slate-700">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex justify-between">
             <div className="flex space-x-4">
@@ -40,26 +40,26 @@ export const NavBar = () => {
                   to="/"
                   className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900"
                 >
-                  <img src={olmeSVG} alt="olmeiro picture" />
+                  <img className='rounded-md' src={olmeSVG} alt="olmeiro picture" />
                 </Link>
               </div>
             </div>
             {/* primary nav */}
             <div className="hidden md:flex w-full items-center space-x-1">
               <Link
-                className="py-5 px-2 text-gray-600 hover:text-gray-900"
+                className="py-5 px-2 text-gray-600 hover:text-gray-900 dark:text-white dark:hover:text-slate-200"
                 to="/"
               >
                 Home
               </Link>
               <Link
-                className="py-5 px-2 text-gray-600 hover:text-gray-900"
+                className="py-5 px-2 text-gray-600 hover:text-gray-900 dark:text-white dark:hover:text-slate-200"
                 to="/projects"
               >
                 Projects
               </Link>
               <Link
-                className="py-5 px-2 text-gray-600 hover:text-gray-900"
+                className="py-5 px-2 text-gray-600 hover:text-gray-900 dark:text-white dark:hover:text-slate-200"
                 to="/contact"
               >
                 Contact

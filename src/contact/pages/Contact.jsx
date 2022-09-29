@@ -53,8 +53,8 @@ export const Contact = () => {
 
   return (
     <Layout>
-      <div className='mb-4 p-4'>
-        <article className="flex flex-col items-center p-4 justify-center">
+      <div className='mb-4 p-4 dark:bg-black'>
+        <article className="flex flex-col items-center p-4 justify-center dark:text-white">
           <h2 className="font-advent font-semibold text-4xl text-left">
             Let&apos;s work together
           </h2>
@@ -90,9 +90,9 @@ export const Contact = () => {
             className="flex flex-col justify-center items-center"
           >
             <div className="w-full md:w-1/2 flex flex-col">
-              <label htmlFor="name">Name:</label>
+              <label className='dark:text-white' htmlFor="name">Name:</label>
               <input
-                className="form-input px-4 py-3 rounded-full"
+                className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
                 type="text"
                 name="name"
                 onChange={hadleInputChange}
@@ -101,41 +101,41 @@ export const Contact = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
-              <label htmlFor="email">Email:</label>
+              <label className='dark:text-white' htmlFor="email">Email:</label>
               <input
                 type="email"
                 name="email"
                 onChange={hadleInputChange}
                 value={email}
-                className="form-input px-4 py-3 rounded-full"
+                className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
               ></input>
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
-              <label htmlFor="message">Phone number:</label>
+              <label className='dark:text-white' htmlFor="message">Phone number:</label>
               <input
                 type="number"
                 name="phone"
                 onChange={hadleInputChange}
                 value={phone}
-                className="form-input px-4 py-3 rounded-full"
+                className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
               ></input>
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
-              <label htmlFor="message">Message:</label>
+              <label className='dark:text-white' htmlFor="message">Message:</label>
               <input
                 type="textarea"
                 name="message"
                 onChange={hadleInputChange}
                 value={message}
-                className="form-input px-4 py-3 rounded-full"
+                className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
               ></input>
             </div>
 
             <button
               type="submit"
-              className="w-1/2 bg-slate-300 p-4 rounded-full mt-4 text-lg font-semibold hover:bg-black hover:text-white"
+              className="w-1/2 bg-slate-300 p-4 rounded-full mt-4 text-lg font-semibold hover:bg-black hover:text-white dark:hover:bg-slate-600 dark:hover:text-white"
             >
               Send
             </button>
