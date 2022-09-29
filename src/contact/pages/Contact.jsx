@@ -1,20 +1,42 @@
-import { Layout } from '../../layout/Layout'
+import { useRef } from 'react'
 import { MdOutlineMail } from 'react-icons/md'
 import { BsTelephoneOutbound } from 'react-icons/bs'
+import emailjs from '@emailjs/browser'
+
+import { Layout } from '../../layout/Layout'
 import { useForm } from '../hooks/useForm'
 
 const initialStateForm = {
   name: '',
   email: '',
-  message: ''
+  message: '',
+  phone: ''
 }
 
 export const Contact = () => {
-  const { hadleInputChange, name, email, message } = useForm(initialStateForm)
+  const ref = useRef()
+  const { hadleInputChange, name, email, message, phone } = useForm(initialStateForm)
 
   const handleSubmit = (e) => {
+    const YOUR_SERVICE_ID = 'service_qnne41v'
+    const YOUR_PUBLIC_KEY = 'tC-rHnFJEFsK2vhzK'
+    const YOUR_TEMPLATE_ID = 'contact_form'
+
     e.preventDefault()
-    console.log({ name, email, message })
+
+    const templateParams = {
+      name,
+      email,
+      message,
+      phone
+    }
+
+    emailjs.send(`${YOUR_SERVICE_ID}`, `${YOUR_TEMPLATE_ID}`, templateParams, `${YOUR_PUBLIC_KEY}`)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text)
+      }, (err) => {
+        console.log('FAILED...', err)
+      })
   }
 
   return (
@@ -51,6 +73,7 @@ export const Contact = () => {
 
         <section>
           <form
+            ref={ref}
             onSubmit={handleSubmit}
             className="flex flex-col justify-center items-center"
           >
@@ -72,6 +95,17 @@ export const Contact = () => {
                 name="email"
                 onChange={hadleInputChange}
                 value={email}
+                className="form-input px-4 py-3 rounded-full"
+              ></input>
+            </div>
+
+            <div className="w-full md:w-1/2 flex flex-col">
+              <label htmlFor="message">Phone number:</label>
+              <input
+                type="number"
+                name="phone"
+                onChange={hadleInputChange}
+                value={phone}
                 className="form-input px-4 py-3 rounded-full"
               ></input>
             </div>
