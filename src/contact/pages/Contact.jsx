@@ -18,7 +18,7 @@ const initialStateForm = {
 
 export const Contact = () => {
   const ref = useRef()
-  const { hadleInputChange, name, email, message, phone } = useForm(initialStateForm)
+  const { hadleInputChange, name, email, message, phone, reset } = useForm(initialStateForm)
 
   const handleSubmit = (e) => {
     const YOUR_SERVICE_ID = 'service_qnne41v'
@@ -49,7 +49,7 @@ export const Contact = () => {
         Swal.fire('Try it again. Something was wrong!')
       })
 
-    e.target.reset()
+    reset()
   }
 
   return (
