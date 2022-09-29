@@ -16,8 +16,8 @@ import profileImg from '../assets/profile-photo.png'
 export const Home = () => {
   return (
     <Layout>
-      <section className="mt-14">
-        <section className="w-full flex flex-col justify-center items-center md:flex-row md:p-4 border border-solid divide-black  outline-2 rounded-lg shadow-xl mb-6">
+      <section className="p-4">
+        <section className="w-full lg:w-2/3 lg:mx-auto flex flex-col justify-center items-center md:flex-row md:p-4 border border-solid divide-black  outline-2 rounded-lg shadow-xl mb-6">
           <div className="">
             <img
               src={profileImg}

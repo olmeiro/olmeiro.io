@@ -55,9 +55,9 @@ export const NavBar = () => {
                 Contact
                 </Link>
             </div>
-            <div className='flex items-center'>
+            {/* <div className='flex items-center'>
               <Dark />
-            </div>
+            </div> */}
 
             {/* mobile button goes here */}
             <div className="md:hidden flex items-center">

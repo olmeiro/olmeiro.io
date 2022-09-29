@@ -53,7 +53,7 @@ export const Contact = () => {
 
   return (
     <Layout>
-      <div>
+      <div className='mb-4 p-4'>
         <article className="flex flex-col items-center p-4 justify-center">
           <h2 className="font-advent font-semibold text-4xl text-left">
             Let&apos;s work together
