@@ -1,8 +1,11 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
-import Dark from '../../dark/Dark'
 
+import Dark from '../../dark/Dark'
+import contactSVG from '../assets/contact.svg'
+import folderSVG from '../assets/folder.svg'
 import olmeSVG from '../assets/olme.svg'
+import homeSVG from '../assets/home.svg'
 
 export const NavBar = () => {
   // Grab everything we need
@@ -11,9 +14,7 @@ export const NavBar = () => {
 
   // addEventListener
   useEffect(() => {
-    const handleClickMenuMobile = event => {
-      // console.log("button clicked.")
-      // elementMenu.classList.toggle('-translate-x-full')
+    const handleClickMenuMobile = (event) => {
       elementMenu.classList.toggle('hidden')
     }
 
@@ -39,62 +40,78 @@ export const NavBar = () => {
                   to="/"
                   className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900"
                 >
-                 <img src={olmeSVG} alt="olmeiro picture" />
+                  <img src={olmeSVG} alt="olmeiro picture" />
                 </Link>
               </div>
             </div>
             {/* primary nav */}
             <div className="hidden md:flex w-full items-center space-x-1">
-                <Link className="py-5 px-2 text-gray-600 hover:text-gray-900" to="/">
+              <Link
+                className="py-5 px-2 text-gray-600 hover:text-gray-900"
+                to="/"
+              >
                 Home
-                </Link>
-                <Link className="py-5 px-2 text-gray-600 hover:text-gray-900" to="/projects">
+              </Link>
+              <Link
+                className="py-5 px-2 text-gray-600 hover:text-gray-900"
+                to="/projects"
+              >
                 Projects
-                </Link>
-                <Link className="py-5 px-2 text-gray-600 hover:text-gray-900" to="/contact">
+              </Link>
+              <Link
+                className="py-5 px-2 text-gray-600 hover:text-gray-900"
+                to="/contact"
+              >
                 Contact
-                </Link>
+              </Link>
             </div>
-            {/* <div className='flex items-center'>
-              <Dark />
-            </div> */}
 
             {/* mobile button goes here */}
-            <div className="md:hidden flex items-center">
+            <div className="flex items-center">
               <button
                 ref={btnMobile}
                 className="mobile-menu-button
-              ">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0  24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
-                  />
-                </svg>
+              "
+              >
+                <Dark />
               </button>
             </div>
           </div>
         </div>
 
-        {/* mobile menu */}
         <div
-          ref={menuMobile}
-          className="hidden md:hidden absolute left-1/2 w-1/2 z-20 bg-gray-400 rounded-bl-2xl">
-          <Link className=" py-2 px-4 text-sm flex justify-end hover:bg-gray-400" to="/">
-          Home
+          className="w-full h-auto p-4 bg-secondary fixed left-0 bottom-0 shadow-md  flex justify-around lg:hidden"
+          id="tab_bar"
+        >
+          <Link to="/" className="flex flex-col items-center justify-center">
+            <img
+              className="w-[30px] h-[30px] hover:bg-white hover:rounded-full"
+              src={homeSVG}
+              alt=""
+            />
+            <span>home</span>
           </Link>
-          <Link className=" py-2 px-4 text-sm flex justify-end hover:bg-gray-200" to="/projects">
-          Projects
+          <Link
+            to="/projects"
+            className="flex flex-col items-center justify-center"
+          >
+            <img
+              className="w-[30px] h-[30px] hover:bg-white hover:rounded-full"
+              src={folderSVG}
+              alt=""
+            />
+            <span>projects</span>
           </Link>
-          <Link className=" py-2 px-4 text-sm flex justify-end hover:bg-gray-200" to="/contact">
-          Contact
+          <Link
+            to="/contact"
+            className="flex flex-col items-center justify-center"
+          >
+            <img
+              className="w-[30px] h-[30px] hover:bg-white hover:rounded-full"
+              src={contactSVG}
+              alt=""
+            />
+            <span>contact</span>
           </Link>
         </div>
       </nav>

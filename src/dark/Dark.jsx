@@ -28,7 +28,7 @@ function Dark () {
       <button
         type='button'
         onClick={handleThemeSwitch}
-        className="fixed z-10 right-2 top-32 bg-indigo-500 text-lg p-1 rounded-md"
+        className=" bg-indigo-500 text-lg p-1 rounded-md"
       >
         { theme === 'dark' ? '☀️' : '🌛'}
       </button>
