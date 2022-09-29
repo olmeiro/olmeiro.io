@@ -12,11 +12,13 @@ import {
 } from 'react-icons/si'
 
 import profileImg from '../assets/profile-photo.png'
+import cv from '../assets/olmeiro_orozco_cv.pdf'
+import { Link } from 'react-router-dom'
 
 export const Home = () => {
   return (
     <Layout>
-      <section className="p-4">
+      <section className="p-1">
         <section className="w-full lg:w-2/3 lg:mx-auto flex flex-col justify-center items-center md:flex-row md:p-4 border border-solid divide-black  outline-2 rounded-lg shadow-xl mb-6">
           <div className="">
             <img
@@ -113,7 +115,7 @@ export const Home = () => {
             </article>
           </div>
         </section>
-        <section className="md:m-16 xl:m-32">
+        <section className="lg:w-1/2 lg:mx-auto">
           <article className="p-2">
             <p className="font-dmsans  subpixel-antialiased tracking-wider leading-relaxed text-center md:text-left">
               Hi, I am Olmeiro, I like to learning all technologies related to
@@ -126,6 +128,14 @@ export const Home = () => {
               career as a Javascript Developer. Do not hesitate to contact me.
             </p>
           </article>
+          <div className='flex justify-center '>
+          <Link
+            to={cv}
+            target="_blank"
+            download
+            className='w-2/6 text-center bg-slate-300 p-2 rounded-md font-advent font-bold hover:bg-black hover:text-white'
+          >Download</Link>
+          </div>
         </section>
       </section>
     </Layout>
