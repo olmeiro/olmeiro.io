@@ -1,38 +1,29 @@
 import { useEffect, useState } from 'react'
 
 function Dark () {
-  const [theme, setTheme] = useState(null)
+  const [theme, setTheme] = useState(localStorage.theme)
+  const colorTheme = theme === 'dark' ? 'light' : 'dark'
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark')
-    } else {
-      setTheme('light')
-    }
-  }, [])
-
-  useEffect(() => {
-    if (theme === 'dark') {
-      document.documentElement.classList.add('dark')
-    } else {
-      document.documentElement.classList.remove('dark')
-    }
-  }, [theme])
+    document.documentElement.classList.remove(colorTheme)
+    document.documentElement.classList.add(theme)
+    localStorage.setItem('theme', `${theme}`)
+  }, [theme, colorTheme])
 
   const handleThemeSwitch = () => {
     setTheme(theme === 'dark' ? 'light' : 'dark')
   }
 
   return (
-    <>
+    <div className='flex items-center'>
       <button
         type='button'
         onClick={handleThemeSwitch}
-        className=" bg-slate-400 text-lg p-1 rounded-md"
+        className="h-1/2  bg-slate-400 text-lg p-1 rounded-md"
       >
         { theme === 'dark' ? '☀️' : '🌛'}
       </button>
-    </>
+    </div>
   )
 }
 

@@ -18,7 +18,7 @@ import { Link } from 'react-router-dom'
 export const Home = () => {
   return (
     <Layout>
-      <section className="p-4 dark:bg-black">
+      <section className="p-4 dark:bg-slate-800">
         <section className="w-full lg:w-2/3 lg:mx-auto flex flex-col justify-center items-center md:flex-row md:p-4 border border-solid divide-black  outline-2 rounded-lg shadow-xl mb-6">
           <div className="">
             <img
@@ -29,13 +29,13 @@ export const Home = () => {
           </div>
           <div className="">
             <article>
-              <h2 className="text-4xl md:text-5xl text-center mb-1 font-advent font-extrabold leading-snug dark:text-white">
+              <h2 className="text-4xl md:text-5xl text-center mb-1 font-advent font-extrabold leading-snug dark:text-slate-100">
                 Olmeiro Orozco Ortiz.
               </h2>
               <section className="flex flex-col gap-3">
                 <section className="m-5">
                   <div className="flex justify-center">
-                    <p className="flex flex-row items-center gap-2 dark:text-white">
+                    <p className="flex flex-row items-center gap-2 dark:text-slate-100">
                       <i className="">
                         <TiDeviceLaptop />
                       </i>
@@ -44,7 +44,7 @@ export const Home = () => {
                   </div>
 
                   <div className="flex justify-center">
-                    <p className="flex flex-row items-center gap-2 dark:text-white">
+                    <p className="flex flex-row items-center gap-2 dark:text-slate-100">
                       <i className="dark:bg-white rounded-full">
                         <GrLocation />
                       </i>
@@ -53,7 +53,7 @@ export const Home = () => {
                   </div>
 
                   <div className="flex justify-center">
-                    <p className="flex flex-row items-center gap-2 dark:text-white">
+                    <p className="flex flex-row items-center gap-2 dark:text-slate-100">
                       <i className="">
                         <MdOutlineMail />
                       </i>
@@ -62,41 +62,41 @@ export const Home = () => {
                   </div>
                 </section>
                 <section className="mb-3">
-                  <h2 className="text-center text-2xl mb-4 font-advent font-bold dark:text-white">
+                  <h2 className="text-center text-2xl mb-4 font-advent font-bold dark:text-slate-100">
                     Tech Stack:
                   </h2>
                   <div className="flex justify-center gap-3 flex-wrap">
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiJavascript className='dark:text-white' />
-                      <p className="font-dmsans leading-relaxed dark:text-white">Javascript</p>
+                      <SiJavascript className='dark:text-slate-100' />
+                      <p className="font-dmsans leading-relaxed dark:text-slate-100">Javascript</p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiReact className='dark:text-white'/>
-                      <p className="font-dmsans font-light leading-relaxed dark:text-white">
+                      <SiReact className='dark:text-slate-100'/>
+                      <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         React
                       </p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiNodedotjs className='dark:text-white' />
-                      <p className="font-dmsans font-light leading-relaxed dark:text-white">
+                      <SiNodedotjs className='dark:text-slate-100' />
+                      <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         Node
                       </p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiExpress className='dark:text-white'/>
-                      <p className="font-dmsans font-light leading-relaxed dark:text-white">
+                      <SiExpress className='dark:text-slate-100'/>
+                      <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         Express
                       </p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiMysql className='dark:text-white' />
-                      <p className="font-dmsans font-light leading-relaxed dark:text-white">
+                      <SiMysql className='dark:text-slate-100' />
+                      <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         MySQL
                       </p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiPostgresql className='dark:text-white'/>
-                      <p className="font-dmsans font-light leading-relaxed dark:text-white">
+                      <SiPostgresql className='dark:text-slate-100'/>
+                      <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         Postgresql
                       </p>
                     </div>
@@ -108,12 +108,12 @@ export const Home = () => {
         </section>
         <section className="lg:w-1/2 lg:mx-auto">
           <article className="p-2">
-            <p className="font-dmsans  subpixel-antialiased tracking-wider leading-relaxed text-center md:text-left dark:text-white">
+            <p className="font-dmsans  subpixel-antialiased tracking-wider leading-relaxed text-center md:text-left dark:text-slate-100">
               Hi, I am Olmeiro, I like to learning all technologies related to
               Javascript. I recently finished Team International Bootcamp
               learning Node.js with React.
             </p>
-            <p className="mt-3 font-dmsans subpixel-antialiased tracking-wider leading-relaxed text-center md:text-left dark:text-white">
+            <p className="mt-3 font-dmsans subpixel-antialiased tracking-wider leading-relaxed text-center md:text-left dark:text-slate-100">
               As a Javascript developer, I put all my efforts into learning
               everyday, I am always open to starting new projects to boost my
               career as a Javascript Developer. Do not hesitate to contact me.

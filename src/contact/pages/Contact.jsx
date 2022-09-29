@@ -53,8 +53,8 @@ export const Contact = () => {
 
   return (
     <Layout>
-      <div className='mb-4 p-4 dark:bg-black'>
-        <article className="flex flex-col items-center p-4 justify-center dark:text-white">
+      <div className='mb-4 p-4 dark:bg-slate-800'>
+        <article className="flex flex-col items-center p-4 justify-center dark:text-slate-100">
           <h2 className="font-advent font-semibold text-4xl text-left">
             Let&apos;s work together
           </h2>
@@ -90,7 +90,7 @@ export const Contact = () => {
             className="flex flex-col justify-center items-center"
           >
             <div className="w-full md:w-1/2 flex flex-col">
-              <label className='dark:text-white' htmlFor="name">Name:</label>
+              <label className='dark:text-slate-100' htmlFor="name">Name:</label>
               <input
                 className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
                 type="text"
@@ -101,7 +101,7 @@ export const Contact = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
-              <label className='dark:text-white' htmlFor="email">Email:</label>
+              <label className='dark:text-slate-100' htmlFor="email">Email:</label>
               <input
                 type="email"
                 name="email"
@@ -112,7 +112,7 @@ export const Contact = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
-              <label className='dark:text-white' htmlFor="message">Phone number:</label>
+              <label className='dark:text-slate-100' htmlFor="message">Phone number:</label>
               <input
                 type="number"
                 name="phone"
@@ -123,7 +123,7 @@ export const Contact = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
-              <label className='dark:text-white' htmlFor="message">Message:</label>
+              <label className='dark:text-slate-100' htmlFor="message">Message:</label>
               <input
                 type="textarea"
                 name="message"

@@ -10,23 +10,7 @@ import homeSVG from '../assets/home.svg'
 export const NavBar = () => {
   // Grab everything we need
   const btnMobile = useRef()
-  const menuMobile = useRef()
 
-  // addEventListener
-  useEffect(() => {
-    const handleClickMenuMobile = (event) => {
-      elementMenu.classList.toggle('hidden')
-    }
-
-    const btnMenu = btnMobile.current
-    const elementMenu = menuMobile.current
-
-    btnMenu.addEventListener('click', handleClickMenuMobile)
-
-    return () => {
-      btnMenu.removeEventListener('click', handleClickMenuMobile)
-    }
-  }, [])
   return (
     <>
       {/* navbar goes here */}
@@ -67,15 +51,7 @@ export const NavBar = () => {
             </div>
 
             {/* mobile button goes here */}
-            <div className="flex items-center">
-              <button
-                ref={btnMobile}
-                className="mobile-menu-button
-              "
-              >
                 <Dark />
-              </button>
-            </div>
           </div>
         </div>
 
