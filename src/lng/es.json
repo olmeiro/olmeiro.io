@@ -1,0 +1,31 @@
+{
+  "navbar": {
+    "tab1": "Inicio",
+    "tab2": "Proyectos",
+    "tab3": "Contacto"
+  },
+  "footer": {
+    "portfolio": "Portafolio"
+  },
+  "home": {
+    "stack": "Technologies:",
+    "paragraph1": "Hola, soy Olmeiro, desarrollador Javascript. Algunos de mis puntos fuertes son la productividad, el compromiso y un fuerte sentido del trabajo en equipo. Doy lo mejor de mí para alcanzar  los objetivos propuestos en cada proyecto.",
+    "paragraph2": "A diario, pongo todo mi empeño en aprender, siempre estoy abierto a iniciar nuevos proyectos para impulsar mi carrera como Desarrollador. No dudes en ponerte en contacto conmigo.",
+    "btnDownload": "Descargar CV"
+  },
+  "projects": {
+    "title": "Proyectos:",
+    "cardDescription": "",
+    "technologies": "Tecnologías"
+  },
+  "contact": {
+    "title": "Trabajemos juntos!",
+    "paragraph": "Construyamos el futuro. Si quieres ponerte en contacto conmigo llámame o rellena el siguiente formulario.",
+    "footer": "Espero saber de ti.",
+    "name": "Nombre",
+    "email": "Correo electrónico",
+    "phone": "Número de contacto",
+    "message": "Mensaje",
+    "btnForm": "Enviar"
+  }
+}

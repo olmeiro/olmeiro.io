@@ -1,9 +1,13 @@
+import { BrowserRouter } from 'react-router-dom'
+import { Navigation } from './routes/Navigation'
+
+import '../i18n'
 
 function App () {
   return (
-    <div className="min-h-screen bg-slate-300">
-      <h1 className='bg-slate-500'>App</h1>
-    </div>
+    <BrowserRouter>
+      <Navigation />
+    </BrowserRouter>
   )
 }
 
