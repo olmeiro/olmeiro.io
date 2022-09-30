@@ -12,7 +12,8 @@ export const projects = [
       'Social Red Social TGL is a social network exclusively for students and employees of Team International, in order to provide information of interest about the company, courses or purposes.',
     image: imgSocialTgl,
     tecnologies: ['React', 'Node', 'Express', 'Vite', 'Vercel', 'Railways', 'Vite', 'Vercel', 'Railways'],
-    repo: 'https://github.com/olmeiro/capstone-project-tgl'
+    repo: 'https://github.com/olmeiro/capstone-project-tgl',
+    demo: 'https://capstone-project-tgl.vercel.app/auth/login'
   },
   {
     title: 'Star Wars App',
@@ -21,7 +22,8 @@ export const projects = [
       'Here I consumed api swapi with React. The deployment was made with Vercel. Amazing learning new tools.',
     image: imgStar,
     tecnologies: ['React', 'Create React App', 'Vercel', 'CSS', 'Tailwind'],
-    repo: 'https://github.com/olmeiro/swapi-react'
+    repo: 'https://github.com/olmeiro/swapi-react',
+    demo: 'https://swapi-react-two.vercel.app/'
   },
   {
     title: 'Next project will be yours',

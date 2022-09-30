@@ -53,10 +53,13 @@ export const Projects = () => {
                     </div>
                   </div>
                 </section>
-                <p className="text-base font-advent font-semibold m-3 flex items-center justify-end gap-3 dark:text-slate-100">
-                  Repo:
-                  <a href={project.repo} target="_blank" rel="noreferrer" className=''><FaGithub /></a>
-                </p>
+                <div className='flex justify-around items-center' >
+                  <p className="text-base font-advent font-semibold m-3 flex items-center justify-end gap-3 dark:text-slate-100">
+                    Repo:
+                    <a href={project.repo} target="_blank" rel="noreferrer" className=''><FaGithub /></a>
+                  </p>
+                  <p className='font-semibold'><a className='hover:bg-black p-1 hover:text-white hover:rounded-2xl dark:text-white' href={project.demo} target="_blank" rel="noreferrer">{project.demo ? 'demo' : ''}</a></p>
+                </div>
               </div>
             )
           })}
