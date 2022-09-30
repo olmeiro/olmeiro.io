@@ -1,5 +1,8 @@
-import { useEffect, useRef } from 'react'
+import { GiColombia } from 'react-icons/gi'
+import { RiEnglishInput } from 'react-icons/ri'
+
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 import Dark from '../../dark/Dark'
 import contactSVG from '../assets/contact.svg'
@@ -8,8 +11,12 @@ import olmeSVG from '../assets/olme.svg'
 import homeSVG from '../assets/home.svg'
 
 export const NavBar = () => {
-  // Grab everything we need
-  const btnMobile = useRef()
+  const { t, i18n } = useTranslation()
+
+  const handleChangeLng = (lng) => {
+    i18n.changeLanguage(lng)
+    localStorage.setItem('lng', lng)
+  }
 
   return (
     <>
@@ -24,7 +31,11 @@ export const NavBar = () => {
                   to="/"
                   className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900"
                 >
-                  <img className='rounded-md' src={olmeSVG} alt="olmeiro picture" />
+                  <img
+                    className="rounded-md"
+                    src={olmeSVG}
+                    alt="olmeiro picture"
+                  />
                 </Link>
               </div>
             </div>
@@ -34,24 +45,33 @@ export const NavBar = () => {
                 className="py-5 px-2 text-gray-600 hover:text-gray-900 dark:text-white dark:hover:text-slate-200"
                 to="/"
               >
-                Home
+                {t('navbar.tab1')}
               </Link>
               <Link
                 className="py-5 px-2 text-gray-600 hover:text-gray-900 dark:text-white dark:hover:text-slate-200"
                 to="/projects"
               >
-                Projects
+                 {t('navbar.tab2')}
               </Link>
               <Link
                 className="py-5 px-2 text-gray-600 hover:text-gray-900 dark:text-white dark:hover:text-slate-200"
                 to="/contact"
               >
-                Contact
+                 {t('navbar.tab3')}
               </Link>
             </div>
 
+            <div className="flex flex-col justify-center items-center md:flex-row">
+              <button onClick={() => handleChangeLng('es')} className="p-1 md:p-3 mr-1 bg-slate-200 rounded-full hover:bg-black hover:text-white ">
+                <GiColombia />
+              </button>
+              <button onClick={() => handleChangeLng('en')} className="p-1 md:p-3 mr-1 bg-slate-200 rounded-full hover:bg-black hover:text-white ">
+                <RiEnglishInput />
+              </button>
+            </div>
+
             {/* mobile button goes here */}
-                <Dark />
+            <Dark />
           </div>
         </div>
 
