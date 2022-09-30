@@ -13,7 +13,7 @@
     "paragraph2": "Every day, I put all my efforts into learning, and I'm always open to starting new projects to boost my career as a developer. Do not hesitate to contact me.",
     "btnDownload": "Download CV"
   },
-  "projects":{
+  "projects": {
     "title": "Projects:",
     "cardDescription": "",
     "technologies": "Technologies"
@@ -25,7 +25,7 @@
     "name": "Name",
     "email": "Email",
     "phone": "Phone number",
-    "message":"Message",
+    "message": "Message",
     "btnForm": "Send"
   }
 }

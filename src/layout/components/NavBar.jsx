@@ -51,27 +51,33 @@ export const NavBar = () => {
                 className="py-5 px-2 text-gray-600 hover:text-gray-900 dark:text-white dark:hover:text-slate-200"
                 to="/projects"
               >
-                 {t('navbar.tab2')}
+                {t('navbar.tab2')}
               </Link>
               <Link
                 className="py-5 px-2 text-gray-600 hover:text-gray-900 dark:text-white dark:hover:text-slate-200"
                 to="/contact"
               >
-                 {t('navbar.tab3')}
+                {t('navbar.tab3')}
               </Link>
             </div>
 
             <div className="flex flex-col justify-center items-center md:flex-row">
-              <button onClick={() => handleChangeLng('es')} className="t-tooltip p-1 md:p-3 mr-1 bg-slate-200 rounded-full hover:bg-black hover:text-white ">
+              <button
+                onClick={() => handleChangeLng('es')}
+                className="t-tooltip p-1 md:p-3 mr-1 bg-slate-200 rounded-full hover:bg-black hover:text-white "
+              >
                 <GiColombia />
               </button>
-              <div className='hidden absolute '>
+              <div className="hidden absolute ">
                 <p>Español</p>
               </div>
-              <button onClick={() => handleChangeLng('en')} className="p-1 md:p-3 mr-1 mt-1 bg-slate-200 rounded-full hover:bg-black hover:text-white ">
+              <button
+                onClick={() => handleChangeLng('en')}
+                className="p-1 md:p-3 mr-1 mt-1 bg-slate-200 rounded-full hover:bg-black hover:text-white "
+              >
                 <RiEnglishInput />
               </button>
-              <div className='hidden absolute '>
+              <div className="hidden absolute ">
                 <p>English</p>
               </div>
             </div>

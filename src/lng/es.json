@@ -13,7 +13,7 @@
     "paragraph2": "A diario, pongo todo mi empeño en aprender, siempre estoy abierto a iniciar nuevos proyectos para impulsar mi carrera como Desarrollador. No dudes en ponerte en contacto conmigo.",
     "btnDownload": "Descargar CV"
   },
-  "projects":{
+  "projects": {
     "title": "Proyectos:",
     "cardDescription": "",
     "technologies": "Tecnologías"
@@ -25,7 +25,7 @@
     "name": "Nombre",
     "email": "Correo electrónico",
     "phone": "Número de contacto",
-    "message":"Mensaje",
+    "message": "Mensaje",
     "btnForm": "Enviar"
   }
 }

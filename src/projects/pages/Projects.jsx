@@ -30,7 +30,8 @@ export const Projects = () => {
                     {project.title}
                   </h2>
                   <p className="flex justify-end font-dmsans text-xs m-3 dark:text-slate-100">
-                    <i>{<MdDateRange/>}</i>{project.date}
+                    <i>{<MdDateRange />}</i>
+                    {project.date}
                   </p>
                 </div>
                 <p className="h-28 font-dmsans text-xs m-4 subpixel-antialiased tracking-wider leading-relaxed text-center dark:text-slate-100">
@@ -38,7 +39,9 @@ export const Projects = () => {
                 </p>
                 <section className="h-32">
                   <div className="flex flex-row justify-center gap-3 flex-wrap">
-                    <h3 className="font-semibold dark:text-slate-100">{t('projects.technologies')}:</h3>
+                    <h3 className="font-semibold dark:text-slate-100">
+                      {t('projects.technologies')}:
+                    </h3>
                     <div className=" flex justify-center gap- flex-wrap">
                       {project.tecnologies.map((tech, idx) => {
                         return (
@@ -53,12 +56,28 @@ export const Projects = () => {
                     </div>
                   </div>
                 </section>
-                <div className='flex justify-around items-center' >
+                <div className="flex justify-around items-center">
                   <p className="text-base font-advent font-semibold m-3 flex items-center justify-end gap-3 dark:text-slate-100">
                     Repo:
-                    <a href={project.repo} target="_blank" rel="noreferrer" className=''><FaGithub /></a>
+                    <a
+                      href={project.repo}
+                      target="_blank"
+                      rel="noreferrer"
+                      className=""
+                    >
+                      <FaGithub />
+                    </a>
                   </p>
-                  <p className='font-semibold'><a className='hover:bg-black p-1 hover:text-white hover:rounded-2xl dark:text-white' href={project.demo} target="_blank" rel="noreferrer">{project.demo ? 'demo' : ''}</a></p>
+                  <p className="font-semibold">
+                    <a
+                      className="hover:bg-black p-1 hover:text-white hover:rounded-2xl dark:text-white"
+                      href={project.demo}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {project.demo ? 'demo' : ''}
+                    </a>
+                  </p>
                 </div>
               </div>
             )

@@ -15,13 +15,13 @@ function Dark () {
   }
 
   return (
-    <div className='flex items-center'>
+    <div className="flex items-center">
       <button
-        type='button'
+        type="button"
         onClick={handleThemeSwitch}
         className="h-1/2  bg-slate-400 text-lg p-1 rounded-md"
       >
-        { theme === 'dark' ? '☀️' : '🌛'}
+        {theme === 'dark' ? '☀️' : '🌛'}
       </button>
     </div>
   )

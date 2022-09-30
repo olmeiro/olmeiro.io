@@ -1,20 +1,13 @@
-import { TiDeviceLaptop } from 'react-icons/ti'
-import { GrLocation } from 'react-icons/gr'
-import { MdOutlineMail } from 'react-icons/md'
 import { useTranslation } from 'react-i18next'
+import { TiDeviceLaptop } from 'react-icons/ti'
+import { MdOutlineMail } from 'react-icons/md'
+import { GrLocation } from 'react-icons/gr'
+import { SiJavascript, SiMysql, SiNodedotjs, SiReact, SiExpress, SiPostgresql } from 'react-icons/si'
 
-import { Layout } from '../../layout/Layout'
-import {
-  SiJavascript,
-  SiMysql,
-  SiNodedotjs,
-  SiReact,
-  SiExpress,
-  SiPostgresql
-} from 'react-icons/si'
 
 import profileImg from '../assets/profile-photo.png'
 import cv from '../assets/olmeiro_orozco_cv.pdf'
+import { Layout } from '../../layout/Layout'
 import { Link } from 'react-router-dom'
 
 export const Home = () => {
@@ -70,35 +63,37 @@ export const Home = () => {
                   </h2>
                   <div className="flex justify-center gap-3 flex-wrap">
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiJavascript className='dark:text-slate-100' />
-                      <p className="font-dmsans leading-relaxed dark:text-slate-100">Javascript</p>
+                      <SiJavascript className="dark:text-slate-100" />
+                      <p className="font-dmsans leading-relaxed dark:text-slate-100">
+                        Javascript
+                      </p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiReact className='dark:text-slate-100'/>
+                      <SiReact className="dark:text-slate-100" />
                       <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         React
                       </p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiNodedotjs className='dark:text-slate-100' />
+                      <SiNodedotjs className="dark:text-slate-100" />
                       <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         Node
                       </p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiExpress className='dark:text-slate-100'/>
+                      <SiExpress className="dark:text-slate-100" />
                       <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         Express
                       </p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiMysql className='dark:text-slate-100' />
+                      <SiMysql className="dark:text-slate-100" />
                       <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         MySQL
                       </p>
                     </div>
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
-                      <SiPostgresql className='dark:text-slate-100'/>
+                      <SiPostgresql className="dark:text-slate-100" />
                       <p className="font-dmsans font-light leading-relaxed dark:text-slate-100">
                         Postgresql
                       </p>
@@ -118,13 +113,15 @@ export const Home = () => {
               {t('home.paragraph2')}
             </p>
           </article>
-          <div className='flex justify-center '>
-          <Link
-            to={cv}
-            target="_blank"
-            download
-            className='w-2/6 text-center bg-slate-300 p-2 rounded-md font-advent font-bold hover:bg-black hover:text-white dark:hover:bg-slate-500'
-          >{t('home.btnDownload')}</Link>
+          <div className="flex justify-center ">
+            <Link
+              to={cv}
+              target="_blank"
+              download
+              className="w-2/6 text-center bg-slate-300 p-2 rounded-md font-advent font-bold hover:bg-black hover:text-white dark:hover:bg-slate-500"
+            >
+              {t('home.btnDownload')}
+            </Link>
           </div>
         </section>
       </section>

@@ -1,6 +1,7 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
-import { Contact } from '../contact/pages/Contact'
+
 import { Home } from '../home/pages/Home'
+import { Contact } from '../contact/pages/Contact'
 import { Projects } from '../projects/pages/Projects'
 
 export const Navigation = () => {

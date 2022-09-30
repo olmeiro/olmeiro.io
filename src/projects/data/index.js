@@ -1,4 +1,3 @@
-
 import imgSocialTgl from '../assets/tglsocialmedia.png'
 import imgStar from '../assets/starapi.png'
 import imgTopacio from '../assets/eltopacio.png'
