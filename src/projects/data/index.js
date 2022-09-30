@@ -24,15 +24,6 @@ export const projects = [
     repo: 'https://github.com/olmeiro/swapi-react'
   },
   {
-    title: 'Topacio food farm store',
-    date: '21-07-2022',
-    description:
-      'This is a store form all kind of products by the farm El Topacio. Is still under construction.',
-    image: imgTopacio,
-    tecnologies: ['React', 'Node', 'Express', 'Vite', 'Vercel', 'Railways'],
-    repo: 'https://github.com/olmeiro'
-  },
-  {
     title: 'Next project will be yours',
     date: '2022-...',
     description:
