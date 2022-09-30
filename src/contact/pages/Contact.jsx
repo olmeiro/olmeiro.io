@@ -3,6 +3,7 @@ import { MdOutlineMail } from 'react-icons/md'
 import { BsTelephoneOutbound } from 'react-icons/bs'
 import emailjs from '@emailjs/browser'
 import Swal from 'sweetalert2'
+import { useTranslation } from 'react-i18next'
 
 import { Layout } from '../../layout/Layout'
 import { useForm } from '../hooks/useForm'
@@ -20,6 +21,7 @@ const initialStateForm = {
 }
 
 export const Contact = () => {
+  const { t } = useTranslation()
   const ref = useRef()
   const { hadleInputChange, name, email, message, phone, reset } = useForm(initialStateForm)
 
@@ -56,14 +58,13 @@ export const Contact = () => {
       <div className='p-4 dark:bg-slate-800'>
         <article className="flex flex-col items-center p-4 justify-center dark:text-slate-100">
           <h2 className="font-advent font-semibold text-4xl text-left">
-            Let&apos;s work together
+            {t('contact.title')}
           </h2>
           <p className="font-dmsans text-left text-lg p-4">
-            Let&apos;s build the future. If you want to reach out me call me or
-            fill out the next form.
+          {t('contact.paragraph')}
           </p>
           <p className="font-dmsans text-left text-lg p-4">
-            I hope to hear from you.
+          {t('contact.footer')}
           </p>
           <footer>
             <div className="flex justify-center items-center md:flex-row flex-col gap-4">
@@ -90,7 +91,7 @@ export const Contact = () => {
             className="flex flex-col justify-center items-center"
           >
             <div className="w-full md:w-1/2 flex flex-col">
-              <label className='dark:text-slate-100' htmlFor="name">Name:</label>
+              <label className='dark:text-slate-100' htmlFor="name">{t('contact.name')}:</label>
               <input
                 className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
                 type="text"
@@ -101,7 +102,7 @@ export const Contact = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
-              <label className='dark:text-slate-100' htmlFor="email">Email:</label>
+              <label className='dark:text-slate-100' htmlFor="email">{t('contact.email')}:</label>
               <input
                 type="email"
                 name="email"
@@ -112,7 +113,7 @@ export const Contact = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
-              <label className='dark:text-slate-100' htmlFor="message">Phone number:</label>
+              <label className='dark:text-slate-100' htmlFor="message">{t('contact.phone')}:</label>
               <input
                 type="number"
                 name="phone"
@@ -123,7 +124,7 @@ export const Contact = () => {
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
-              <label className='dark:text-slate-100' htmlFor="message">Message:</label>
+              <label className='dark:text-slate-100' htmlFor="message">{t('contact.message')}:</label>
               <input
                 type="textarea"
                 name="message"
@@ -137,7 +138,7 @@ export const Contact = () => {
               type="submit"
               className="w-1/2 bg-slate-300 p-4 rounded-full mt-4 text-lg font-semibold hover:bg-black hover:text-white dark:hover:bg-slate-600 dark:hover:text-white"
             >
-              Send
+              {t('contact.btnForm')}
             </button>
           </form>
         </section>

@@ -1,7 +1,9 @@
-import { Layout } from '../../layout/Layout'
 import { TiDeviceLaptop } from 'react-icons/ti'
 import { GrLocation } from 'react-icons/gr'
 import { MdOutlineMail } from 'react-icons/md'
+import { useTranslation } from 'react-i18next'
+
+import { Layout } from '../../layout/Layout'
 import {
   SiJavascript,
   SiMysql,
@@ -16,6 +18,7 @@ import cv from '../assets/olmeiro_orozco_cv.pdf'
 import { Link } from 'react-router-dom'
 
 export const Home = () => {
+  const { t } = useTranslation()
   return (
     <Layout>
       <section className="p-4 dark:bg-slate-800">
@@ -63,7 +66,7 @@ export const Home = () => {
                 </section>
                 <section className="mb-3">
                   <h2 className="text-center text-2xl mb-4 font-advent font-bold dark:text-slate-100">
-                    Tech Stack:
+                    {t('home.stack')}
                   </h2>
                   <div className="flex justify-center gap-3 flex-wrap">
                     <div className="flex flex-row items-center p-1 gap-1 border-solid border-2 border-b-gray-400 rounded-md">
@@ -109,14 +112,10 @@ export const Home = () => {
         <section className="lg:w-1/2 lg:mx-auto">
           <article className="p-2">
             <p className="font-dmsans  subpixel-antialiased tracking-wider leading-relaxed text-center md:text-left dark:text-slate-100">
-              Hi, I am Olmeiro, I like to learning all technologies related to
-              Javascript. I recently finished Team International Bootcamp
-              learning Node.js with React.
+              {t('home.paragraph1')}
             </p>
             <p className="mt-3 font-dmsans subpixel-antialiased tracking-wider leading-relaxed text-center md:text-left dark:text-slate-100">
-              As a Javascript developer, I put all my efforts into learning
-              everyday, I am always open to starting new projects to boost my
-              career as a Javascript Developer. Do not hesitate to contact me.
+              {t('home.paragraph2')}
             </p>
           </article>
           <div className='flex justify-center '>
@@ -125,7 +124,7 @@ export const Home = () => {
             target="_blank"
             download
             className='w-2/6 text-center bg-slate-300 p-2 rounded-md font-advent font-bold hover:bg-black hover:text-white dark:hover:bg-slate-500'
-          >Download</Link>
+          >{t('home.btnDownload')}</Link>
           </div>
         </section>
       </section>

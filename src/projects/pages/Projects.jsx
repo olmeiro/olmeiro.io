@@ -1,14 +1,17 @@
 import { FaGithub } from 'react-icons/fa'
 import { MdDateRange } from 'react-icons/md'
+import { useTranslation } from 'react-i18next'
+
 import { Layout } from '../../layout/Layout'
 import { projects } from '../data'
 
 export const Projects = () => {
+  const { t } = useTranslation()
   return (
     <Layout>
       <div className="flex flex-col justify-center dark:bg-slate-800">
         <h2 className="text-4xl md:text-5xl text-center p-4  font-advent font-extrabold leading-snug dark:text-slate-100">
-          Projects: {projects.length}
+          {t('projects.title')} {projects.length}
         </h2>
         <section className="flex flex-col justify-center items-center gap-4 flex-wrap md:flex-row mt-3">
           {projects.map((project, idx) => {
@@ -35,7 +38,7 @@ export const Projects = () => {
                 </p>
                 <section className="h-32">
                   <div className="flex flex-row justify-center gap-3 flex-wrap">
-                    <h3 className="font-semibold dark:text-slate-100">Technologies:</h3>
+                    <h3 className="font-semibold dark:text-slate-100">{t('projects.technologies')}:</h3>
                     <div className=" flex justify-center gap- flex-wrap">
                       {project.tecnologies.map((tech, idx) => {
                         return (

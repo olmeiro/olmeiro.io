@@ -62,15 +62,20 @@ export const NavBar = () => {
             </div>
 
             <div className="flex flex-col justify-center items-center md:flex-row">
-              <button onClick={() => handleChangeLng('es')} className="p-1 md:p-3 mr-1 bg-slate-200 rounded-full hover:bg-black hover:text-white ">
+              <button onClick={() => handleChangeLng('es')} className="t-tooltip p-1 md:p-3 mr-1 bg-slate-200 rounded-full hover:bg-black hover:text-white ">
                 <GiColombia />
               </button>
-              <button onClick={() => handleChangeLng('en')} className="p-1 md:p-3 mr-1 bg-slate-200 rounded-full hover:bg-black hover:text-white ">
+              <div className='hidden absolute '>
+                <p>Español</p>
+              </div>
+              <button onClick={() => handleChangeLng('en')} className="p-1 md:p-3 mr-1 mt-1 bg-slate-200 rounded-full hover:bg-black hover:text-white ">
                 <RiEnglishInput />
               </button>
+              <div className='hidden absolute '>
+                <p>English</p>
+              </div>
             </div>
 
-            {/* mobile button goes here */}
             <Dark />
           </div>
         </div>
@@ -85,7 +90,7 @@ export const NavBar = () => {
               src={homeSVG}
               alt=""
             />
-            <span>home</span>
+            <span> {t('navbar.tab1')}</span>
           </Link>
           <Link
             to="/projects"
@@ -96,7 +101,7 @@ export const NavBar = () => {
               src={folderSVG}
               alt=""
             />
-            <span>projects</span>
+            <span> {t('navbar.tab2')}</span>
           </Link>
           <Link
             to="/contact"
@@ -107,7 +112,7 @@ export const NavBar = () => {
               src={contactSVG}
               alt=""
             />
-            <span>contact</span>
+            <span> {t('navbar.tab3')}</span>
           </Link>
         </div>
       </nav>

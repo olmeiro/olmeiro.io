@@ -3,5 +3,29 @@
     "tab1": "Home",
     "tab2": "Projects",
     "tab3": "Contact"
+  },
+  "footer": {
+    "portfolio": "Portfolio"
+  },
+  "home": {
+    "stack": "Technologies:",
+    "paragraph1": "Hi, I am Olmeiro, I like to learning all technologies related to Javascript. I recently finished Team International Bootcamp learning Node.js with React.",
+    "paragraph2": "As a Javascript developer, I put all my efforts into learning everyday, I am always open to starting new projects to boost my career as a Javascript Developer. Do not hesitate to contact me.",
+    "btnDownload": "Download CV"
+  },
+  "projects":{
+    "title": "Projects:",
+    "cardDescription": "",
+    "technologies": "Technologies"
+  },
+  "contact": {
+    "title": "Let's work together",
+    "paragraph": "Let's build the future. If you want to reach out me call me or fill out the next form.",
+    "footer": "I hope to hear from you.",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone number",
+    "message":"Message",
+    "btnForm": "Send"
   }
 }
