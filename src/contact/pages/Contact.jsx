@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { MdOutlineMail } from 'react-icons/md'
 import { BsTelephoneOutbound } from 'react-icons/bs'
 
-import imageForm from '../assets/imgform.png'
+import imageForm from '../../../public/images/imgform.png'
 import { Layout } from '../../layout/Layout'
 import { getEnvVariables } from '../helpers'
 import { useForm } from '../hooks/useForm'

@@ -2,11 +2,17 @@ import { useTranslation } from 'react-i18next'
 import { TiDeviceLaptop } from 'react-icons/ti'
 import { MdOutlineMail } from 'react-icons/md'
 import { GrLocation } from 'react-icons/gr'
-import { SiJavascript, SiMysql, SiNodedotjs, SiReact, SiExpress, SiPostgresql } from 'react-icons/si'
+import {
+  SiJavascript,
+  SiMysql,
+  SiNodedotjs,
+  SiReact,
+  SiExpress,
+  SiPostgresql
+} from 'react-icons/si'
 
-
-import profileImg from '../assets/profile-photo.png'
-import cv from '../assets/olmeiro_orozco_cv.pdf'
+import profileImg from '../../../public/images/profile-photo.png'
+import cv from '../../../public/olmeiro_orozco_cv.pdf'
 import { Layout } from '../../layout/Layout'
 import { Link } from 'react-router-dom'
 
@@ -19,7 +25,7 @@ export const Home = () => {
           <div className="">
             <img
               src={profileImg}
-              className="w-32 h-32 md:w-64 md:h-64 mb-6 bg-black rounded-full object-cover"
+              className="w-32 h-40 md:w-60 md:h-80 rounded-full bg-white object-cover"
               alt="profile photo olme"
             />
           </div>
