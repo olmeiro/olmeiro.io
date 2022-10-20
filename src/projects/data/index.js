@@ -1,8 +1,8 @@
-import imgSocialTgl from '../assets/tglsocialmedia.png'
-import imgStar from '../assets/starapi.png'
-import imgTopacio from '../assets/eltopacio.png'
-import imgAstro from '../assets/astro.jpg'
-import imgTrivia from '../assets/trivia.png'
+import imgSocialTgl from '../../../public/images/tglsocialmedia.png'
+import imgStar from '../../../public/images/starapi.png'
+// import imgTopacio from '../../../public/images/eltopacio.png'
+import imgAstro from '../../../public/images/astro.jpg'
+import imgTrivia from '../../../public/images/trivia.png'
 
 export const projects = [
   {
