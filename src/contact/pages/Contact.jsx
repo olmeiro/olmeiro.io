@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import Swal from 'sweetalert2'
 import emailjs from '@emailjs/browser'
 import { useTranslation } from 'react-i18next'
@@ -12,47 +12,70 @@ import { useForm } from '../hooks/useForm'
 
 const { VITE_PUBLIC_KEY, VITE_SERVICE_ID, VITE_TEMPLATE_ID } = getEnvVariables()
 
-const initialStateForm = {
+const formData = {
   name: '',
   email: '',
   message: '',
   phone: ''
 }
 
+const formValidations = {
+  name: [(value) => {
+    const regex = /^[a-z\s]+$/i
+    const regexName = regex.test(value)
+    return regexName
+  }, 'Escribe nombre y apellido. Sólo letras.'],
+  email: [(value) => {
+    const regex = /[a-z0-9]+[_a-z0-9/.-]*[a-z0-9]+@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})/ig
+    const regexEmail = regex.test(value)
+    return regexEmail
+  }, 'El email es incorrecto.'],
+  phone: [(value) => {
+    const regex = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+    const testRegex = regex.test(value)
+    return testRegex
+  }, 'El número de contacto es número móvil de 10 dígitos.'],
+  message: [(value) => {
+    if (value.length > 0) return true
+  }, 'Ingresa un mensaje para Olme. Sólo letras.']
+}
+
 export const Contact = () => {
+  const [formSubmitted, setFormSubmitted] = useState(false)
   const { t } = useTranslation()
   const ref = useRef()
-  const { hadleInputChange, name, email, message, phone, reset } =
-    useForm(initialStateForm)
+  const { name, email, phone, message, onInputChange, nameValid, emailValid, phoneValid, messageValid, onResetForm, isFormValid } = useForm(formData, formValidations)
 
   const handleSubmit = (e) => {
     e.preventDefault()
+    setFormSubmitted(true)
     const templateParams = { name, email, message, phone }
-
-    emailjs
-      .send(
-        `${VITE_SERVICE_ID}`,
-        `${VITE_TEMPLATE_ID}`,
-        templateParams,
-        `${VITE_PUBLIC_KEY}`
-      )
-      .then(
-        (response) => {
-          Swal.fire({
-            title: 'Excellent!',
-            text: 'I will be contacting you soon..',
-            imageUrl: `${imageForm}`,
-            imageWidth: 400,
-            imageHeight: 200,
-            imageAlt: 'image logo olme'
-          })
-        },
-        (err) => {
-          Swal.fire('Try it again. Something was wrong!', err)
-        }
-      )
-
-    reset()
+    if (isFormValid) {
+      emailjs
+        .send(
+          `${VITE_SERVICE_ID}`,
+          `${VITE_TEMPLATE_ID}`,
+          templateParams,
+          `${VITE_PUBLIC_KEY}`
+        )
+        .then(
+          (response) => {
+            Swal.fire({
+              title: 'Excellent!',
+              text: 'I will be contacting you soon..',
+              imageUrl: `${imageForm}`,
+              imageWidth: 400,
+              imageHeight: 200,
+              imageAlt: 'image logo olme'
+            })
+          },
+          (err) => {
+            Swal.fire('Try it again. Something was wrong!', err)
+          }
+        )
+      setFormSubmitted(false)
+      onResetForm()
+    }
   }
 
   return (
@@ -100,9 +123,10 @@ export const Contact = () => {
                 className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
                 type="text"
                 name="name"
-                onChange={hadleInputChange}
+                onChange={onInputChange}
                 value={name}
               />
+              <span className='text-[10px] text-end text-red-600'>{formSubmitted && nameValid}</span>
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
@@ -112,10 +136,11 @@ export const Contact = () => {
               <input
                 type="email"
                 name="email"
-                onChange={hadleInputChange}
+                onChange={onInputChange}
                 value={email}
                 className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
-              ></input>
+              />
+              <span className='text-[10px] text-end text-red-600'>{formSubmitted && emailValid}</span>
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
@@ -125,10 +150,11 @@ export const Contact = () => {
               <input
                 type="number"
                 name="phone"
-                onChange={hadleInputChange}
+                onChange={onInputChange}
                 value={phone}
                 className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
-              ></input>
+              />
+              <span className='text-[10px] text-end text-red-600'>{formSubmitted && phoneValid}</span>
             </div>
 
             <div className="w-full md:w-1/2 flex flex-col">
@@ -138,10 +164,11 @@ export const Contact = () => {
               <input
                 type="textarea"
                 name="message"
-                onChange={hadleInputChange}
+                onChange={onInputChange}
                 value={message}
                 className="form-input px-4 py-3 rounded-full dark:bg-slate-300"
-              ></input>
+              />
+              <span className='text-[10px] text-end text-red-600'>{formSubmitted && messageValid}</span>
             </div>
 
             <button
