@@ -11,7 +11,8 @@ import {
   SiPostgresql
 } from 'react-icons/si'
 
-import profileImg from '../../../public/images/profile-photo.png'
+// import profileImg from '../../../public/images/profile-photo.png'
+import profileImg from '../../../public/images/profile-photo.jpg'
 import cv from '../../../public/olmeiro_orozco_cv.pdf'
 import { Layout } from '../../layout/Layout'
 import { Link } from 'react-router-dom'
