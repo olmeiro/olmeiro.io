@@ -91,22 +91,6 @@ export const Contact = () => {
           <p className="font-dmsans text-left text-lg p-4">
             {t('contact.footer')}
           </p>
-          <footer>
-            <div className="flex justify-center items-center md:flex-row flex-col gap-4">
-              <p className="flex flex-row items-center gap-2 font-semibold">
-                <i className="">
-                  <MdOutlineMail />
-                </i>
-                olme.orozco@gmail.com
-              </p>
-              <p className="flex flex-row items-center gap-2 font-semibold">
-                <i className="">
-                  <BsTelephoneOutbound />
-                </i>
-                313-5257802
-              </p>
-            </div>
-          </footer>
         </article>
 
         <section>

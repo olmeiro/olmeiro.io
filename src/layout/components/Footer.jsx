@@ -8,17 +8,8 @@ export const Footer = () => {
       <div className="w-1/4 flex justify-center">
         <p className=" font-advent font-semibold">{t('footer.portfolio')}</p>
       </div>
-      <div className="w-1/4 flex justify-center">
-        <article className="flex flex-col justify-center ">
-          <h4 className="text-center font-advent font-bold">Bogotá,Colombia</h4>
-          <p className="text-center ">(+57) 313 525 7802</p>
-          <footer className="font-advent font-bold">
-            olme.orozco@gmail.com
-          </footer>
-        </article>
-      </div>
       <div className="w-1/4 flex flex-row justify-center">
-        <p className="font-advent font-bold">&copy;Olmeiro_orozco.2022.</p>
+        <p className="font-advent font-bold">&copy;Olmeiro_orozco 2023.</p>
       </div>
       <div className="w-1/4 flex flex-row justify-center m-2">
         <a
